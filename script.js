@@ -28,7 +28,7 @@ const storyScenes = [
       { text: "12 July ☀️", correct: false },
       { text: "1rst standard", correct: true }
     ],
-    correctResponse: "Yes!! That was the day everything changed for me ❤️",
+    correctResponse: "Yes!! The days when destiny decided to let us meet without convos ❤️",
     wrongResponse: "Hehe not exactly… but I love that you're trying 😄"
   },
   {
