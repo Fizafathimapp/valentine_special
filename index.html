@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Portal ❤️ — Valentine's Day</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor heart trail container -->
+  <div id="heart-trail"></div>
+
+  <!-- Floating hearts background -->
+  <div id="floating-hearts"></div>
+
+  <!-- SECTION 1 — SECRET LOVE LOGIN -->
+  <section id="section-login" class="screen active">
+    <div class="glass-card login-card">
+      <h1 class="romantic-title">Welcome to the Love Portal ❤️</h1>
+      <form id="login-form" class="login-form">
+        <div class="input-group">
+          <input type="text" id="login-name" placeholder="Your name" autocomplete="off" required>
+          <span class="input-glow"></span>
+        </div>
+        <div class="input-group">
+          <input type="password" id="login-password" placeholder="Password" required>
+          <span class="input-glow"></span>
+        </div>
+        <button type="submit" class="btn-romantic">Enter ❤️</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Login error modal -->
+  <div id="modal-login-error" class="modal-overlay hidden">
+    <div class="modal glass-card shake">
+      <p>Oops! This love portal is only for someone special ❤️</p>
+      <button class="btn-romantic modal-close" data-close="modal-login-error">OK</button>
+    </div>
+  </div>
+
+  <!-- SECTION 2 — LOVE CONFESSION -->
+  <section id="section-confession" class="screen">
+    <div class="glass-card confession-card">
+      <h2 class="romantic-title">Do you love me? ❤️</h2>
+      <div class="btn-group">
+        <button id="btn-love-yes" class="btn-romantic btn-yes">YES</button>
+        <button id="btn-love-no" class="btn-romantic btn-no">NO</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2B — REJECTION SCREEN -->
+  <section id="section-rejection" class="screen">
+    <div id="broken-hearts"></div>
+    <div class="glass-card rejection-card">
+      <p class="rejection-text">That's okay… I still wish you happiness 💔</p>
+      <button id="btn-back-confession" class="btn-romantic">Back</button>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — VALENTINE PROPOSAL -->
+  <section id="section-proposal" class="screen">
+    <div class="glass-card proposal-card">
+      <h2 class="romantic-title">Will you be my Valentine? 💖</h2>
+      <div class="btn-group">
+        <button id="btn-valentine-yes" class="btn-romantic btn-yes">YES</button>
+        <button id="btn-valentine-no" class="btn-romantic btn-no-moving">NO</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Invalid option modal (Valentine NO) -->
+  <div id="modal-invalid-option" class="modal-overlay hidden">
+    <div class="modal glass-card">
+      <p>Invalid option 😤 Only I deserve Your heart!</p>
+      <button class="btn-romantic modal-close" data-close="modal-invalid-option">OK</button>
+    </div>
+  </div>
+
+  <!-- Confetti / celebration container -->
+  <div id="celebration-container"></div>
+
+  <!-- ENVELOPE STORY ENTRY -->
+  <section id="section-envelope" class="screen">
+    <div class="dim-overlay"></div>
+    <div id="envelope-wrapper" class="envelope-wrapper">
+      <div class="envelope glass-card" id="envelope">
+        <p class="envelope-text">Let's Relive Our Story 💌</p>
+        <p class="envelope-hint">Click to open</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE LOVE STORY -->
+  <section id="section-story" class="screen">
+    <div class="story-container">
+      <div class="story-scene glass-card" id="story-scene">
+        <div class="story-text-wrapper">
+          <p class="story-question" id="story-question"></p>
+        </div>
+        <div class="story-answers" id="story-answers"></div>
+        <button class="btn-romantic btn-next hidden" id="btn-next">Next 💖</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cartoon couple scene (between Scene 1 and Scene 2) -->
+  <section id="section-cartoon" class="screen">
+    <div class="cartoon-scene-wrapper">
+      <div class="cartoon-frame glass-card">
+        <div class="cartoon-image-container" id="cartoon-image-container">
+          <img src="love-couple.png" alt="Us together" class="cartoon-image" id="cartoon-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="cartoon-placeholder" style="display:none;">❤️ Us ❤️</div>
+        </div>
+        <p class="cartoon-caption">This is my favorite version of us ❤️</p>
+      </div>
+      <div id="cartoon-hearts"></div>
+      <button class="btn-romantic btn-next" id="btn-cartoon-next">Continue 💖</button>
+    </div>
+    <div id="cartoon-popup" class="popup-message hidden">
+      <p>Us… in every story, every dream, every memory 💖</p>
+    </div>
+  </section>
+
+  <!-- Answer response popup (story) -->
+  <div id="story-response-popup" class="popup-message hidden">
+    <p id="story-response-text"></p>
+  </div>
+
+  <!-- STORY ENDING SCREEN -->
+  <section id="section-ending" class="screen">
+    <div id="ending-hearts"></div>
+    <div class="glass-card ending-card">
+      <h2 class="romantic-title ending-title">Our story is my favorite adventure ❤️</h2>
+      <div class="summary-cards" id="summary-cards"></div>
+      <blockquote class="ending-quote">"In you I've found the love of my life and my closest, truest friend. Here's to forever with you."</blockquote>
+      <p class="ending-signature">— With all my love 💖</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
