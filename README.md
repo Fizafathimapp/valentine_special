@@ -1,0 +1,1 @@
+This is a  valentines day project created using html , css and javascript when life gets bored during this occasion . i thought let this day be quite interesting with codes and love , with a significantly aesthetic and classy website.
